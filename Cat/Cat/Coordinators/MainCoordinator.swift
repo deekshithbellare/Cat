@@ -32,3 +32,17 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(catsViewController, animated: false)
     }
 }
+
+// A protocol to be implemented by Coordinator responsible for Favourites screen routing.
+protocol ViewFavourites {
+    func showFavourites()
+}
+
+// Currently MainCoordinator handles routing for Favourites. When functioanlity grows we should create separate Coodinator for Favourites scene
+extension MainCoordinator:ViewFavourites {
+    func showFavourites() {
+        let storyboard = UIStoryboard(.main)
+        let favouritesViewController:FavouritesViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(favouritesViewController, animated: false)
+    }
+}

@@ -17,6 +17,7 @@
 		45DE52BA24D99DAE00FEBC4B /* CatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52B924D99DAE00FEBC4B /* CatUITests.swift */; };
 		45DE52C924D99E7700FEBC4B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52C824D99E7700FEBC4B /* Storyboard.swift */; };
 		45DE52CC24D99F1E00FEBC4B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */; };
+		45DE52CE24D9A1AE00FEBC4B /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52CD24D9A1AE00FEBC4B /* FavouritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		45DE52BB24D99DAE00FEBC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45DE52C824D99E7700FEBC4B /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		45DE52CD24D9A1AE00FEBC4B /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +105,13 @@
 		45DE529624D99DAC00FEBC4B /* Cat */ = {
 			isa = PBXGroup;
 			children = (
+				45DE52CF24D9A1BD00FEBC4B /* Scenes */,
 				45DE52CA24D99EFD00FEBC4B /* Coordinators */,
 				45DE52C724D99E7700FEBC4B /* Extenstions */,
 				45DE529724D99DAC00FEBC4B /* AppDelegate.swift */,
 				45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */,
 				45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */,
+				45DE52CD24D9A1AE00FEBC4B /* FavouritesViewController.swift */,
 				45DE529D24D99DAC00FEBC4B /* Main.storyboard */,
 				45DE52A024D99DAE00FEBC4B /* Assets.xcassets */,
 				45DE52A224D99DAE00FEBC4B /* LaunchScreen.storyboard */,
@@ -148,6 +152,29 @@
 				45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		45DE52CF24D9A1BD00FEBC4B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				45DE52D124D9A1DB00FEBC4B /*  Favourites */,
+				45DE52D024D9A1C700FEBC4B /* CatListing */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		45DE52D024D9A1C700FEBC4B /* CatListing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CatListing;
+			sourceTree = "<group>";
+		};
+		45DE52D124D9A1DB00FEBC4B /*  Favourites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = " Favourites";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DE52CE24D9A1AE00FEBC4B /* FavouritesViewController.swift in Sources */,
 				45DE52C924D99E7700FEBC4B /* Storyboard.swift in Sources */,
 				45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */,
 				45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */,
