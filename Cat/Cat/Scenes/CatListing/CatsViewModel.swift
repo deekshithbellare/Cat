@@ -8,3 +8,31 @@
 
 import Foundation
 
+class CatsViewModel {
+    var cats: [Cat]?
+    let router = Router<CatAPI>()
+    
+    func fetchRandomCats(completion: @escaping (_ error: String?) -> Void) {
+        DispatchQueue.global().async {
+            self.router.request(.randomCats) { [weak self] data, error in
+                guard let self = self else { return }
+                
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    guard let cats = try? decoder.decode([Cat].self, from: data) else {
+                        return
+                    }
+                    self.cats = cats
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } else if let error = error {
+                    print(error)
+                    DispatchQueue.main.async {
+                        completion(error)
+                    }
+                }
+            }
+        }
+    }
+}
