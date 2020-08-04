@@ -16,6 +16,7 @@
 		45DE52AF24D99DAE00FEBC4B /* CatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52AE24D99DAE00FEBC4B /* CatTests.swift */; };
 		45DE52BA24D99DAE00FEBC4B /* CatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52B924D99DAE00FEBC4B /* CatUITests.swift */; };
 		45DE52C924D99E7700FEBC4B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52C824D99E7700FEBC4B /* Storyboard.swift */; };
+		45DE52CC24D99F1E00FEBC4B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		45DE52B924D99DAE00FEBC4B /* CatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUITests.swift; sourceTree = "<group>"; };
 		45DE52BB24D99DAE00FEBC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45DE52C824D99E7700FEBC4B /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		45DE529624D99DAC00FEBC4B /* Cat */ = {
 			isa = PBXGroup;
 			children = (
+				45DE52CA24D99EFD00FEBC4B /* Coordinators */,
 				45DE52C724D99E7700FEBC4B /* Extenstions */,
 				45DE529724D99DAC00FEBC4B /* AppDelegate.swift */,
 				45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */,
@@ -137,6 +140,14 @@
 				45DE52C824D99E7700FEBC4B /* Storyboard.swift */,
 			);
 			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		45DE52CA24D99EFD00FEBC4B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				45DE52CB24D99F1E00FEBC4B /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				45DE52C924D99E7700FEBC4B /* Storyboard.swift in Sources */,
 				45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */,
 				45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */,
+				45DE52CC24D99F1E00FEBC4B /* MainCoordinator.swift in Sources */,
 				45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
