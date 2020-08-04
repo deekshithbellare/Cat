@@ -15,6 +15,8 @@
 		452445BC24D9BB690097FF95 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445B424D9BB690097FF95 /* Router.swift */; };
 		452445BD24D9BB690097FF95 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445B524D9BB690097FF95 /* NetworkLogger.swift */; };
 		452445BE24D9BB690097FF95 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445B624D9BB690097FF95 /* EndPointType.swift */; };
+		452445C024D9BC740097FF95 /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445BF24D9BC740097FF95 /* CatsViewModel.swift */; };
+		452445C324D9BCAF0097FF95 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C224D9BCAF0097FF95 /* Cat.swift */; };
 		45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529724D99DAC00FEBC4B /* AppDelegate.swift */; };
 		45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */; };
 		45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */; };
@@ -54,6 +56,8 @@
 		452445B424D9BB690097FF95 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		452445B524D9BB690097FF95 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		452445B624D9BB690097FF95 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		452445BF24D9BC740097FF95 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
+		452445C224D9BCAF0097FF95 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		45DE529424D99DAC00FEBC4B /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DE529724D99DAC00FEBC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		452445C124D9BC8E0097FF95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				452445C224D9BCAF0097FF95 /* Cat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		45DE528B24D99DAC00FEBC4B = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 		45DE529624D99DAC00FEBC4B /* Cat */ = {
 			isa = PBXGroup;
 			children = (
+				452445C124D9BC8E0097FF95 /* Model */,
 				45DE52CF24D9A1BD00FEBC4B /* Scenes */,
 				45DE52CA24D99EFD00FEBC4B /* Coordinators */,
 				45DE52C724D99E7700FEBC4B /* Extenstions */,
@@ -213,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */,
+				452445BF24D9BC740097FF95 /* CatsViewModel.swift */,
 			);
 			path = CatListing;
 			sourceTree = "<group>";
@@ -368,7 +382,9 @@
 				452445B924D9BB690097FF95 /* JSONParameterEncoder.swift in Sources */,
 				452445BA24D9BB690097FF95 /* HTTPTask.swift in Sources */,
 				45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */,
+				452445C324D9BCAF0097FF95 /* Cat.swift in Sources */,
 				45DE52CC24D99F1E00FEBC4B /* MainCoordinator.swift in Sources */,
+				452445C024D9BC740097FF95 /* CatsViewModel.swift in Sources */,
 				45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
