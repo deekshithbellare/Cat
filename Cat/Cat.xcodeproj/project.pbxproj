@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		452445C624D9BE010097FF95 /* CatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C524D9BE010097FF95 /* CatAPI.swift */; };
 		452445C924D9BE320097FF95 /* CatAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C824D9BE320097FF95 /* CatAPIConfig.swift */; };
 		452445D724D9E8CA0097FF95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445D624D9E8CA0097FF95 /* UIView.swift */; };
+		452445DA24D9E9FA0097FF95 /* KingfisherDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 452445D924D9E9FA0097FF95 /* KingfisherDynamic */; };
+		452445DB24D9E9FA0097FF95 /* KingfisherDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 452445D924D9E9FA0097FF95 /* KingfisherDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529724D99DAC00FEBC4B /* AppDelegate.swift */; };
 		45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */; };
 		45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */; };
@@ -49,6 +51,20 @@
 			remoteInfo = Cat;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		452445DC24D9E9FA0097FF95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				452445DB24D9E9FA0097FF95 /* KingfisherDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		452445AE24D9BB690097FF95 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -88,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452445DA24D9E9FA0097FF95 /* KingfisherDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +291,16 @@
 				45DE529024D99DAC00FEBC4B /* Sources */,
 				45DE529124D99DAC00FEBC4B /* Frameworks */,
 				45DE529224D99DAC00FEBC4B /* Resources */,
+				452445DC24D9E9FA0097FF95 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Cat;
+			packageProductDependencies = (
+				452445D924D9E9FA0097FF95 /* KingfisherDynamic */,
+			);
 			productName = Cat;
 			productReference = 45DE529424D99DAC00FEBC4B /* Cat.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +373,9 @@
 				Base,
 			);
 			mainGroup = 45DE528B24D99DAC00FEBC4B;
+			packageReferences = (
+				452445D824D9E9FA0097FF95 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 45DE529524D99DAC00FEBC4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -736,6 +760,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		452445D824D9E9FA0097FF95 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		452445D924D9E9FA0097FF95 /* KingfisherDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 452445D824D9E9FA0097FF95 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45DE528C24D99DAC00FEBC4B /* Project object */;
 }
