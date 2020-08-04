@@ -17,6 +17,8 @@
 		452445BE24D9BB690097FF95 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445B624D9BB690097FF95 /* EndPointType.swift */; };
 		452445C024D9BC740097FF95 /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445BF24D9BC740097FF95 /* CatsViewModel.swift */; };
 		452445C324D9BCAF0097FF95 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C224D9BCAF0097FF95 /* Cat.swift */; };
+		452445C624D9BE010097FF95 /* CatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C524D9BE010097FF95 /* CatAPI.swift */; };
+		452445C924D9BE320097FF95 /* CatAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445C824D9BE320097FF95 /* CatAPIConfig.swift */; };
 		45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529724D99DAC00FEBC4B /* AppDelegate.swift */; };
 		45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */; };
 		45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */; };
@@ -58,6 +60,8 @@
 		452445B624D9BB690097FF95 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		452445BF24D9BC740097FF95 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
 		452445C224D9BCAF0097FF95 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		452445C524D9BE010097FF95 /* CatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPI.swift; sourceTree = "<group>"; };
+		452445C824D9BE320097FF95 /* CatAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIConfig.swift; sourceTree = "<group>"; };
 		45DE529424D99DAC00FEBC4B /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DE529724D99DAC00FEBC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		452445AC24D9BB690097FF95 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				452445C724D9BE210097FF95 /* Config */,
+				452445C424D9BDB60097FF95 /* EndPoints */,
 				452445AD24D9BB690097FF95 /* Encoding */,
 				452445B124D9BB690097FF95 /* Service */,
 			);
@@ -139,6 +145,22 @@
 				452445C224D9BCAF0097FF95 /* Cat.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		452445C424D9BDB60097FF95 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				452445C524D9BE010097FF95 /* CatAPI.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		452445C724D9BE210097FF95 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				452445C824D9BE320097FF95 /* CatAPIConfig.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		45DE528B24D99DAC00FEBC4B = {
@@ -377,11 +399,13 @@
 				452445BC24D9BB690097FF95 /* Router.swift in Sources */,
 				452445BD24D9BB690097FF95 /* NetworkLogger.swift in Sources */,
 				452445BE24D9BB690097FF95 /* EndPointType.swift in Sources */,
+				452445C924D9BE320097FF95 /* CatAPIConfig.swift in Sources */,
 				45DE52C924D99E7700FEBC4B /* Storyboard.swift in Sources */,
 				45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */,
 				452445B924D9BB690097FF95 /* JSONParameterEncoder.swift in Sources */,
 				452445BA24D9BB690097FF95 /* HTTPTask.swift in Sources */,
 				45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */,
+				452445C624D9BE010097FF95 /* CatAPI.swift in Sources */,
 				452445C324D9BCAF0097FF95 /* Cat.swift in Sources */,
 				45DE52CC24D99F1E00FEBC4B /* MainCoordinator.swift in Sources */,
 				452445C024D9BC740097FF95 /* CatsViewModel.swift in Sources */,
