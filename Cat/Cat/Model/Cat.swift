@@ -14,3 +14,14 @@ struct Cat:Codable {
     //Url for the image of cat
     var url:String
 }
+
+// To use it with diffable datasources, Cat should be hashable and Equtable
+extension Cat:Hashable {
+    static func == (lhs: Cat, rhs: Cat) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
