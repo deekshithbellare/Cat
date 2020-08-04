@@ -110,8 +110,6 @@
 				45DE52C724D99E7700FEBC4B /* Extenstions */,
 				45DE529724D99DAC00FEBC4B /* AppDelegate.swift */,
 				45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */,
-				45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */,
-				45DE52CD24D9A1AE00FEBC4B /* FavouritesViewController.swift */,
 				45DE529D24D99DAC00FEBC4B /* Main.storyboard */,
 				45DE52A024D99DAE00FEBC4B /* Assets.xcassets */,
 				45DE52A224D99DAE00FEBC4B /* LaunchScreen.storyboard */,
@@ -166,6 +164,7 @@
 		45DE52D024D9A1C700FEBC4B /* CatListing */ = {
 			isa = PBXGroup;
 			children = (
+				45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */,
 			);
 			path = CatListing;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 		45DE52D124D9A1DB00FEBC4B /*  Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				45DE52CD24D9A1AE00FEBC4B /* FavouritesViewController.swift */,
 			);
 			path = " Favourites";
 			sourceTree = "<group>";
