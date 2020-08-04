@@ -15,6 +15,8 @@ protocol Coordinator {
     func start()
 }
 
+// Coordinator responsible for the navigation from Scene delegate.
+// MainCoordinator is the parent of all coordinators
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
