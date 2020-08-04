@@ -53,7 +53,7 @@ extension CatCollectionViewCell {
         
         imageView.setImage(with: photoURL)
         contentContainer.addSubview(imageView)
-        contentContainer.bindFrameToSuperviewBounds()
-        imageView.bindFrameToSuperviewBounds()
+        contentContainer.bindToSuperviewBounds()
+        imageView.bindToSuperviewBounds()
     }
 }
