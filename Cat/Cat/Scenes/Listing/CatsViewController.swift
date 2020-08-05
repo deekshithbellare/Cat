@@ -15,6 +15,7 @@ class CatsViewController: UIViewController {
     private var viewModel = CatsViewModel()
     @IBOutlet weak var catsCollectionView: UICollectionView!
     
+    @IBOutlet weak var viewFavouritesButton: UIBarButtonItem!
     enum Section {
         case catSectoon
     }
@@ -23,6 +24,8 @@ class CatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Cats"
+        viewFavouritesButton.title = "Favourites"
         configureCollectionView()
         configureDataSource()
         viewModel.fetchRandomCats { (error) in
@@ -35,6 +38,7 @@ class CatsViewController: UIViewController {
     }
 }
 
+// MARK: - UI
 extension CatsViewController {
     func configureCollectionView() {
         catsCollectionView.collectionViewLayout = generateLayout()

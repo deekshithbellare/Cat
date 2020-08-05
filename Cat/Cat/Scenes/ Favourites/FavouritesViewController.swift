@@ -11,6 +11,7 @@ import UIKit
 class FavouritesViewController: UIViewController {
     private var viewModel = FavouriteViewModel()
     @IBOutlet weak var catsCollectionView: UICollectionView!
+    
     enum Section {
         case catSectoon
     }
@@ -18,6 +19,7 @@ class FavouritesViewController: UIViewController {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Cat>!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Favourites"
         configureCollectionView()
         configureDataSource()
         // Do any additional setup after loading the view.
@@ -25,7 +27,7 @@ class FavouritesViewController: UIViewController {
     
 }
 
-
+// MARK: - UI
 extension FavouritesViewController {
     func configureCollectionView() {
         catsCollectionView.collectionViewLayout = generateLayout()
