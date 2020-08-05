@@ -30,6 +30,10 @@ class CatsViewController: UIViewController {
         configureDataSource()
         viewModel.fetchRandomCats { [weak self](error) in
             guard let self = self else {return}
+            if let _ = error {
+                //Todo: Show error
+                
+            }
             self.configureDataSource()
         }
     }
