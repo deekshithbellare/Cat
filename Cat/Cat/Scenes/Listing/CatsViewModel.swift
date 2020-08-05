@@ -8,9 +8,28 @@
 
 import Foundation
 
+
+
 class CatsViewModel {
     var cats: [Cat]?
     let router = Router<CatAPI>()
+    var favoriteCats:Set<String> = Set<String>()
+    init() {
+        favoriteCats = FavouriteWorker.favoriteCatIds()
+    }
+    
+    func isFavorited(_ cat:Cat) -> Bool {
+        return favoriteCats.contains(cat.id)
+    }
+    
+    func favourite(_ cat:Cat,isFavourited:Bool) {
+        if isFavourited {
+            favoriteCats.insert(cat.id)
+        } else {
+            favoriteCats.remove(cat.id)
+        }
+        FavouriteWorker.favourite(cat, isFavourited: isFavourited)
+    }
     
     func cat(at indexPath:IndexPath) -> Cat? {
         guard let cats = self.cats, !cats.isEmpty else {

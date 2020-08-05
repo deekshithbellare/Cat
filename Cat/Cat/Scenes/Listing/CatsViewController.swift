@@ -51,6 +51,8 @@ extension CatsViewController {
                     for: indexPath) as? CatCollectionViewCell else { fatalError("Could not create new cell") }
                 cell.delegate = self
                 cell.photoURL = detailItem.url
+                let isFavorited = self.viewModel.isFavorited(detailItem)
+                cell.configure(isFavorited: isFavorited)
                 return cell
         }
         
@@ -151,8 +153,9 @@ extension CatsViewController: UICollectionViewDelegate {
 
 extension CatsViewController:CatCollectionViewCellDelegate {
     func favoriteTap(at cell:CatCollectionViewCell,isFavorited:Bool) {
-        if let indexPath = catsCollectionView.indexPath(for: cell) {
-            let _ = self.viewModel.cat(at: indexPath)
+        if let indexPath = catsCollectionView.indexPath(for: cell),
+            let cat = self.viewModel.cat(at: indexPath) {
+            self.viewModel.favourite(cat, isFavourited: isFavorited)
         }
     }
 }

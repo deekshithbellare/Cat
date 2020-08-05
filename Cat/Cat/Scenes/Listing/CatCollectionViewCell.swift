@@ -36,25 +36,11 @@ class CatCollectionViewCell: UICollectionViewCell {
         return favoriteButton
     }()
     
-    @objc func favorite(sender : UIButton) {
-        sender.isSelected.toggle()
-        if sender.isSelected {
-            sender.tintColor = UIColor.red
-        } else {
-            sender.tintColor = UIColor.lightGray
-        }
-        delegate?.favoriteTap(at: self,isFavorited:sender.isSelected)
-    }
-    
-    var photoURL: String? {
-        didSet {
-            configure()
-        }
-    }
+    var photoURL: String?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
+        configure(isFavorited:false)
     }
     
     required init?(coder: NSCoder) {
@@ -66,10 +52,25 @@ class CatCollectionViewCell: UICollectionViewCell {
         favoriteButon.isSelected = false
         favoriteButon.tintColor = UIColor.lightGray
     }
+    
+    @objc func favorite(sender : UIButton) {
+        sender.isSelected.toggle()
+        updateFavoriteButton(isFavorited: sender.isSelected)
+        delegate?.favoriteTap(at: self,isFavorited:sender.isSelected)
+    }
+    
+    func updateFavoriteButton(isFavorited:Bool) {
+        favoriteButon.isSelected = isFavorited
+        if isFavorited {
+            favoriteButon.tintColor = UIColor.red
+        } else {
+            favoriteButon.tintColor = UIColor.lightGray
+        }
+    }
 }
 
 extension CatCollectionViewCell {
-    func configure() {
+    func configure(isFavorited:Bool) {
         contentContainer.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(contentContainer)
         
@@ -83,6 +84,7 @@ extension CatCollectionViewCell {
         contentContainer.bindToSuperviewBounds()
         imageView.bindToSuperviewBounds()
         configureFavoriteButon()
+        updateFavoriteButton(isFavorited: isFavorited)
     }
     
     func configureFavoriteButon() {
