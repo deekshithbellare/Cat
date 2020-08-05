@@ -46,3 +46,18 @@ extension MainCoordinator:ViewFavourites {
         navigationController.pushViewController(favouritesViewController, animated: false)
     }
 }
+
+protocol ViewCat {
+    func showCat(_ cat:Cat)
+}
+
+extension MainCoordinator:ViewCat {
+    func showCat(_ cat:Cat){
+        let storyboard = UIStoryboard(.main)
+        let catDetailController:CatDetailController = storyboard.instantiateViewController()
+        catDetailController.setUp(with: cat)
+        navigationController.present(catDetailController, animated: true, completion: {
+        })
+    }
+}
+
