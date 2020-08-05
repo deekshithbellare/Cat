@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Localisation
 extension String {
 
     var localized:String {
@@ -16,5 +17,12 @@ extension String {
     func localized(withComment comment: String? = nil) -> String {
         return NSLocalizedString(self, comment: comment ?? "")
     }
+}
 
+//Named colors from the Asset catalog
+//This is a helper enum for named colors.
+//It helps in inteligent code completion and typos while using named colors
+enum Colors:String {
+    case catGrey
+    case catRed
 }

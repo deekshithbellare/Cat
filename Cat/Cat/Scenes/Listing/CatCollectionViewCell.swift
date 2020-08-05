@@ -50,7 +50,7 @@ class CatCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         contentContainer.removeFromSuperview()
         favoriteButon.isSelected = false
-        favoriteButon.tintColor = UIColor.lightGray
+        favoriteButon.tintColor = UIColor(named: Colors.catGrey.rawValue)
     }
     
     @objc func favorite(sender : UIButton) {
@@ -62,9 +62,9 @@ class CatCollectionViewCell: UICollectionViewCell {
     func updateFavoriteButton(isFavorited:Bool) {
         favoriteButon.isSelected = isFavorited
         if isFavorited {
-            favoriteButon.tintColor = UIColor.red
+            favoriteButon.tintColor = UIColor(named: Colors.catRed.rawValue)
         } else {
-            favoriteButon.tintColor = UIColor.lightGray
+            favoriteButon.tintColor = UIColor(named: Colors.catGrey.rawValue)
         }
     }
 }
