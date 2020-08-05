@@ -43,6 +43,13 @@ struct FavouriteWorker {
         return Set(keys)
     }
     
+    static func favoriteCats() -> Array<Cat> {
+         guard let cats = self.fetchFavorites()?.values else {
+             return Array<Cat>()
+         }
+         return Array(cats)
+     }
+    
     static func saveFavorites( cats:[String:Cat]) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(cats) {

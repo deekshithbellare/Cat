@@ -70,7 +70,7 @@ class CatCollectionViewCell: UICollectionViewCell {
 }
 
 extension CatCollectionViewCell {
-    func configure(isFavorited:Bool) {
+    func configure(isFavorited:Bool,shouldHideFavButton:Bool = false) {
         contentContainer.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(contentContainer)
         
@@ -85,6 +85,7 @@ extension CatCollectionViewCell {
         imageView.bindToSuperviewBounds()
         configureFavoriteButon()
         updateFavoriteButton(isFavorited: isFavorited)
+        favoriteButon.isHidden = shouldHideFavButton
     }
     
     func configureFavoriteButon() {
