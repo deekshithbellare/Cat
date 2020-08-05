@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Cat
+
+  Created by Deekshith Bellare on 05/08/20.
+  Copyright © 2020 Deekshith Bellare. All rights reserved.
+*/
+"cat_Cats" = "Cats";
+"cat_Favs" = "Favourites";

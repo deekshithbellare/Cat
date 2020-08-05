@@ -24,11 +24,12 @@ class CatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Cats"
-        viewFavouritesButton.title = "Favourites"
+        self.title = "cat_Cats".localized
+        viewFavouritesButton.title = "cat_Favs".localized
         configureCollectionView()
         configureDataSource()
-        viewModel.fetchRandomCats { (error) in
+        viewModel.fetchRandomCats { [weak self](error) in
+            guard let self = self else {return}
             self.configureDataSource()
         }
     }

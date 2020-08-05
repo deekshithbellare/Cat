@@ -19,7 +19,7 @@ class FavouritesViewController: UIViewController {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Cat>!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Favourites"
+        self.title = "cat_Favs".localized
         configureCollectionView()
         configureDataSource()
         // Do any additional setup after loading the view.
