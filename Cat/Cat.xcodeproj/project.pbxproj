@@ -26,6 +26,7 @@
 		452445E024D9FC4C0097FF95 /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445DF24D9FC4C0097FF95 /* CatCollectionViewCell.swift */; };
 		452445E624DAD4830097FF95 /* CatDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445E524DAD4830097FF95 /* CatDetailController.swift */; };
 		452445E824DAD7440097FF95 /* CatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445E724DAD7440097FF95 /* CatDetailViewModel.swift */; };
+		452445EA24DB0F450097FF95 /* FavouriteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452445E924DB0F450097FF95 /* FavouriteWorker.swift */; };
 		45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529724D99DAC00FEBC4B /* AppDelegate.swift */; };
 		45DE529A24D99DAC00FEBC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */; };
 		45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */; };
@@ -88,6 +89,7 @@
 		452445DF24D9FC4C0097FF95 /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
 		452445E524DAD4830097FF95 /* CatDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailController.swift; sourceTree = "<group>"; };
 		452445E724DAD7440097FF95 /* CatDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewModel.swift; sourceTree = "<group>"; };
+		452445E924DB0F450097FF95 /* FavouriteWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteWorker.swift; sourceTree = "<group>"; };
 		45DE529424D99DAC00FEBC4B /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DE529724D99DAC00FEBC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DE529924D99DAC00FEBC4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				45DE529B24D99DAC00FEBC4B /* CatsViewController.swift */,
 				452445BF24D9BC740097FF95 /* CatsViewModel.swift */,
 				452445DF24D9FC4C0097FF95 /* CatCollectionViewCell.swift */,
+				452445E924DB0F450097FF95 /* FavouriteWorker.swift */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				45DE529C24D99DAC00FEBC4B /* CatsViewController.swift in Sources */,
 				452445B924D9BB690097FF95 /* JSONParameterEncoder.swift in Sources */,
 				452445BA24D9BB690097FF95 /* HTTPTask.swift in Sources */,
+				452445EA24DB0F450097FF95 /* FavouriteWorker.swift in Sources */,
 				45DE529824D99DAC00FEBC4B /* AppDelegate.swift in Sources */,
 				452445D724D9E8CA0097FF95 /* UIView.swift in Sources */,
 				452445E024D9FC4C0097FF95 /* CatCollectionViewCell.swift in Sources */,
