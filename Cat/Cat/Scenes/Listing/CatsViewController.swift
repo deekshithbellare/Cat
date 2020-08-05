@@ -142,5 +142,8 @@ extension CatsViewController {
 
 extension CatsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cat = viewModel.cat(at: indexPath) {
+        coordinator?.showCat(cat)
+        }
     }
 }
