@@ -7,9 +7,13 @@
 //
 
 import UIKit
+protocol CatCollectionViewCellDelegate:AnyObject {
+    func favoriteTap(at cell:CatCollectionViewCell,isFavorited:Bool)
+}
 
 class CatCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifer = "CatCollectionViewCell"
+    weak var delegate:CatCollectionViewCellDelegate?
     let contentContainer = UIView()
     private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -32,13 +36,14 @@ class CatCollectionViewCell: UICollectionViewCell {
         return favoriteButton
     }()
     
-    @objc func favorite(sender : UIButton){
+    @objc func favorite(sender : UIButton) {
         sender.isSelected.toggle()
         if sender.isSelected {
             sender.tintColor = UIColor.red
         } else {
             sender.tintColor = UIColor.lightGray
         }
+        delegate?.favoriteTap(at: self,isFavorited:sender.isSelected)
     }
     
     var photoURL: String? {

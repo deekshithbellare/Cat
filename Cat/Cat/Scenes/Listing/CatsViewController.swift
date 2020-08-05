@@ -49,6 +49,7 @@ extension CatsViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: CatCollectionViewCell.reuseIdentifer,
                     for: indexPath) as? CatCollectionViewCell else { fatalError("Could not create new cell") }
+                cell.delegate = self
                 cell.photoURL = detailItem.url
                 return cell
         }
@@ -147,3 +148,13 @@ extension CatsViewController: UICollectionViewDelegate {
         }
     }
 }
+
+extension CatsViewController:CatCollectionViewCellDelegate {
+    func favoriteTap(at cell:CatCollectionViewCell,isFavorited:Bool) {
+        if let indexPath = catsCollectionView.indexPath(for: cell) {
+            let _ = self.viewModel.cat(at: indexPath)
+        }
+    }
+}
+
+
