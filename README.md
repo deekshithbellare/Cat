@@ -12,3 +12,10 @@ Xcode 13, iOS13, Swift 5.0
 
 ### Architecture
 MVVM, with Simple Cordinator Pattern
+
+# ToDo
+- [ ] Loading indiators and Errors
+- [ ] UI and Unit tests
+- [ ] Implement pagination
+- [ ] Add Coordinators for all controllers
+
